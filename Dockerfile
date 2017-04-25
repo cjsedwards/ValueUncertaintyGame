@@ -1,3 +1,5 @@
 FROM mono:latest
-ADD ./ValueUncertaintyGameRunner/bin/Debug/ .
-CMD [ "mono", "ValueUncertaintyGameRunner.exe" ]
+ADD . .
+RUN nuget restore ValueUncertaintyGame.sln
+RUN xbuild ValueUncertaintyGame.sln
+CMD [ "mono", "/ValueUncertaintyGameRunner/bin/Debug/ValueUncertaintyGameRunner.exe" ]
