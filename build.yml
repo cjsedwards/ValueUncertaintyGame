@@ -7,5 +7,8 @@ image_resource:
 inputs:
 - name: ValueUncertaintyGame
 
+outputs:
+- name: ValueUncertaintyGameBuildResults
+
 run:
   path: ./ValueUncertaintyGame/build.sh
